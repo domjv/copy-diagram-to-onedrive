@@ -12,14 +12,14 @@ class Program
         try
         {
             // Read secrets from environment variables
-            string githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+            string githubToken = Environment.GetEnvironmentVariable("GH_TOKEN");
             string clientId = Environment.GetEnvironmentVariable("CLIENT_ID");
             string clientSecret = Environment.GetEnvironmentVariable("CLIENT_SECRET");
             string tenantId = Environment.GetEnvironmentVariable("TENANT_ID");
 
             // Set up your GitHub repo details
-            string repo = "owner/repo_name"; // Replace with your repo details
-            string filePath = "path/to/your/file";
+            string repo = "domjv/gamechanger-flow"; // Replace with your repo details
+            string filePath = "GameChanger.drawio";
             string branch = "main";
             
             // Step 1: Get file content from GitHub
@@ -29,7 +29,7 @@ class Program
             string accessToken = await GetOnedriveAccessToken(clientId, clientSecret, tenantId);
 
             // Step 3: Upload file to OneDrive
-            string uploadPath = "/drive/root:/path_in_onedrive/file_name";
+            string uploadPath = "/personal/dominic_v_pleasantbiz_com/Documents/Flowcharts/GameChanger.drawio";
             await UploadFileToOnedrive(accessToken, fileContent, uploadPath);
 
             Console.WriteLine("File successfully uploaded to OneDrive.");

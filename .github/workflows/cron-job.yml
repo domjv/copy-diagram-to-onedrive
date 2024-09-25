@@ -1,0 +1,41 @@
+name: Scheduled Job to Run .NET Application
+
+# This sets the cron schedule. In this example, the workflow runs every day at midnight.
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Cron format: Minute Hour Day of Month Month Day of Week
+
+  # Allows you to manually trigger the workflow (optional)
+  workflow_dispatch:
+
+jobs:
+  run-cron-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the latest code from the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Set up .NET Core
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.x'
+
+    # Restore dependencies
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # Build the project
+    - name: Build project
+      run: dotnet build --configuration Release
+
+    # Run the .NET application
+    - name: Run .NET Application
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        CLIENT_ID: ${{ secrets.CLIENT_ID }}
+        CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        TENANT_ID: ${{ secrets.TENANT_ID }}
+      run: dotnet run --project YourProjectName
