@@ -76,7 +76,7 @@ class Program
 
     private static async Task UploadFileToOnedrive(string accessToken, byte[] fileContent, string uploadPath)
     {
-        string userPrincipalName = "dominic_v_pleasantbiz_com";  // This should be your actual UPN
+        string userPrincipalName = "dominic.v@pleasantbiz.com";  // This should be your actual UPN
         string url = $"https://graph.microsoft.com/v1.0/users/{userPrincipalName}/drive/root:{uploadPath}:/content";
 
         using (HttpClient client = new HttpClient())
