@@ -89,7 +89,8 @@ class Program
 
             if (!response.IsSuccessStatusCode)
             {
-                throw new Exception($"Error uploading file to OneDrive: {response.StatusCode}");
+                var responseContent = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Error uploading file to OneDrive: {response.StatusCode} - {responseContent}");
             }
         }
     }
