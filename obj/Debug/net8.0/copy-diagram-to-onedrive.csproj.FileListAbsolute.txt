@@ -1,0 +1,17 @@
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\copy-diagram-to-onedrive.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\copy-diagram-to-onedrive.AssemblyInfoInputs.cache
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\copy-diagram-to-onedrive.AssemblyInfo.cs
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\copy-diagram-to-onedrive.csproj.CoreCompileInputs.cache
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\copy-diagram-to-onedrive.csproj.AssemblyReference.cache
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\bin\Debug\net8.0\copy-diagram-to-onedrive.exe
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\bin\Debug\net8.0\copy-diagram-to-onedrive.deps.json
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\bin\Debug\net8.0\copy-diagram-to-onedrive.runtimeconfig.json
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\bin\Debug\net8.0\copy-diagram-to-onedrive.dll
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\bin\Debug\net8.0\copy-diagram-to-onedrive.pdb
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\copy-dia.0D7C71A6.Up2Date
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\copy-diagram-to-onedrive.dll
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\refint\copy-diagram-to-onedrive.dll
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\copy-diagram-to-onedrive.pdb
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\copy-diagram-to-onedrive.genruntimeconfig.cache
+C:\Users\Dom\source\pleasantbiz\copy-diagram-to-onedrive\obj\Debug\net8.0\ref\copy-diagram-to-onedrive.dll
