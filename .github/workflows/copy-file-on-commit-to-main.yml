@@ -28,6 +28,9 @@ jobs:
     - name: Build project
       run: dotnet build --configuration Release
 
+    - name: List project files
+      run: ls -R
+
     # Run the .NET application
     - name: Run .NET Application
       env:
@@ -35,4 +38,4 @@ jobs:
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
         TENANT_ID: ${{ secrets.TENANT_ID }}
-      run: dotnet run --project copy-diagram-to-onedrive
+      run: dotnet run --project CopyDiagramToOnedrive

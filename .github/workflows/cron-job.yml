@@ -38,4 +38,4 @@ jobs:
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
         TENANT_ID: ${{ secrets.TENANT_ID }}
-      run: dotnet run --project copy-diagram-to-onedrive
+      run: dotnet run --project CopyDiagramToOnedrive
