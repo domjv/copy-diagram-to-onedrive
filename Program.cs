@@ -16,10 +16,12 @@ class Program
             string clientId = Environment.GetEnvironmentVariable("CLIENT_ID");
             string clientSecret = Environment.GetEnvironmentVariable("CLIENT_SECRET");
             string tenantId = Environment.GetEnvironmentVariable("TENANT_ID");
+            string userPrincipalName = Environment.GetEnvironmentVariable("USER_PRINCIPAL_NAME");
+            string uploadPath = Environment.GetEnvironmentVariable("UPLOAD_PATH");
+            string repo = Environment.GetEnvironmentVariable("REPO_NAME");
+            string filePath = Environment.GetEnvironmentVariable("FILE_PATH");
 
             // Set up your GitHub repo details
-            string repo = "domjv/gamechanger-flow"; // Replace with your repo details
-            string filePath = "GameChanger.drawio";
             string branch = "main";
             
             // Step 1: Get file content from GitHub
@@ -29,8 +31,7 @@ class Program
             string accessToken = await GetOnedriveAccessToken(clientId, clientSecret, tenantId);
 
             // Step 3: Upload file to OneDrive
-            string uploadPath = "/personal/dominic_v_pleasantbiz_com/Documents/Flowcharts/GameChanger.drawio";
-            await UploadFileToOnedrive(accessToken, fileContent, uploadPath);
+            await UploadFileToOnedrive(userPrincipalName, accessToken, fileContent, uploadPath);
 
             Console.WriteLine("File successfully uploaded to OneDrive.");
         }
@@ -74,9 +75,8 @@ class Program
         return authResult.AccessToken;
     }
 
-    private static async Task UploadFileToOnedrive(string accessToken, byte[] fileContent, string uploadPath)
+    private static async Task UploadFileToOnedrive(string userPrincipalName, string accessToken, byte[] fileContent, string uploadPath)
     {
-        string userPrincipalName = "dominic.v@pleasantbiz.com";  // This should be your actual UPN
         string url = $"https://graph.microsoft.com/v1.0/users/{userPrincipalName}/drive/root:{uploadPath}:/content";
 
         using (HttpClient client = new HttpClient())

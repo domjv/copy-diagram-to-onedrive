@@ -38,4 +38,8 @@ jobs:
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
         TENANT_ID: ${{ secrets.TENANT_ID }}
+        USER_PRINCIPAL_NAME: ${{ env.USER_PRINCIPAL_NAME }}
+        UPLOAD_PATH: ${{ env.UPLOAD_PATH }}
+        REPO_NAME: ${{ env.REPO_NAME }}
+        FILE_PATH: ${{ env.FILE_PATH }}
       run: dotnet run
