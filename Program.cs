@@ -26,12 +26,14 @@ class Program
             
             // Step 1: Get file content from GitHub
             byte[] fileContent = await GetGitHubFileContent(repo, filePath, branch, githubToken);
+            byte[] readMeFileContent = await GetGitHubFileContent(repo, "SalesIdeas.md", branch, githubToken);
 
             // Step 2: Authenticate with Microsoft Graph API and get access token
             string accessToken = await GetOnedriveAccessToken(clientId, clientSecret, tenantId);
 
             // Step 3: Upload file to OneDrive
             await UploadFileToOnedrive(userPrincipalName, accessToken, fileContent, uploadPath);
+            await UploadFileToOnedrive(userPrincipalName, accessToken, readMeFileContent, "/personal/dominic_v_pleasantbiz_com/Documents/Flowcharts/SalesIdeas.md");
 
             Console.WriteLine("File successfully uploaded to OneDrive.");
         }
